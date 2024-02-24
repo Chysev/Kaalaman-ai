@@ -68,7 +68,7 @@ Things you need to use and knowlegde you need to use this web app.
 
 ### Installation
 
-1. Download all of the Models
+1. Download all of the Models, create "model" directory and put the Models inside the model directory
 2. Clone the repo
    ```sh
    git clone https://github.com/Chysev/Kaalaman-ai
