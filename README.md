@@ -56,6 +56,7 @@ Kaalaman AI is an open source web app that use GPT-Generated Unified Format (GGU
 
 Things you need to use and knowlegde you need to use this web app.
 
+- GIT
 - TYPESCRIPT & JAVASCRIPT
 - PYTHON
 - NODEJS & NPM
