@@ -5,7 +5,7 @@ const generateResponse = async (userInput: string) => {
     const kaalaman3_turbo = "/api/kaalaman3-turbo";
     const kaalaman4_turbo = "/api/kaalaman4-turbo";
     const response = await axios.post(
-      kaalaman3_turbo,
+      kaalaman4_turbo,
       { userInput },
       {
         headers: {
