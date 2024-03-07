@@ -40,13 +40,13 @@
 
 Kaalaman AI is an open source web app that use GPT-Generated Unified Format (GGUF) such as:
 
-- dolphin-2.1-mistral-7b.Q2_K [Download URL][DolphinDDLLINK]
-- gpt4all-falcon-newbpe-q4_0 [Download URL][FalconDDLLINK]
+- llama-2-7b-chat.Q8_0 [Download URL][Llama2_7B_Chat_DDLLINK]
+- codellama-7b.Q8_0 [Download URL][CodeLlama_7B_Chat_DDLLINK]
 - mistral-7b-openorca.Q4_0 [Download URL][MistralDDLLINK]
 - orca-mini-3b-gguf2-q4_0 [Download URL][OrcaDDLLINK]
 
-[DolphinDDLLINK]: https://huggingface.co/TheBloke/dolphin-2.1-mistral-7B-GGUF/blob/main/dolphin-2.1-mistral-7b.Q2_K.gguf
-[FalconDDLLINK]: https://gpt4all.io/models/gguf/gpt4all-falcon-newbpe-q4_0.gguf
+[Llama2_7B_Chat_DDLLINK]: https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/blob/main/llama-2-7b-chat.Q8_0.gguf
+[CodeLlama_7B_Chat_DDLLINK]: https://huggingface.co/TheBloke/CodeLlama-7B-GGUF/blob/main/codellama-7b.Q8_0.gguf
 [MistralDDLLINK]: https://gpt4all.io/models/gguf/mistral-7b-openorca.gguf2.Q4_0.gguf
 [OrcaDDLLINK]: https://gpt4all.io/models/gguf/orca-mini-3b-gguf2-q4_0.gguf
 
@@ -78,27 +78,33 @@ Things you need to use and knowlegde you need to use this web app.
    ```sh
    npm install or yarn
    ```
-4. Define the API Model
+4. Define the API Model - /server/server.js
 
    ```sh
-    try {
-     const kaalaman3_turbo = "/api/kaalaman3-turbo";
-     const kaalaman4_turbo = "/api/kaalaman4-turbo";
+    // Models
+    const Models = {
+      llama2_7B_Chat: "llama-2-7b-chat.Q8_0.gguf",
+      codellama_7B_Chat: "codellama-7b.Q8_0.gguf",
+      mistral: "mistral-7b-openorca.gguf2.Q4_0.gguf",
+      orca: "orca-mini-3b-gguf2-q4_0.gguf",
+    };
 
-     const response = await axios.post(
-       kaalaman3_turbo, - Define Here
-       { userInput },
-       {
-         headers: {
-           "Content-Type": "application/json",
-         },
-       }
-    );
+    // Model Path and new Model define
+    const model = new LlamaModel({
+      modelPath: path.join(process.cwd(), "models", Models.llama2_7B_Chat),- Define here
+    });
    ```
 
-5. Start the Project
+5. Start the Server
    ```sh
-   npm start or yarn start
+   cd server
+   ```
+   ```sh
+   npm run server or yarn server
+   ```
+6. Start the Client
+   ```sh
+   npm run start or yarn start
    ```
 
 <p align="right">(<a href="#readme-top">Back to top</a>)</p>

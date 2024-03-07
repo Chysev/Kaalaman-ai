@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Chysev",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "server": "node server.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "fastify": "^4.26.2",
+    "node-llama-cpp": "^2.8.8"
+  }
+}

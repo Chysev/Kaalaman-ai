@@ -2,10 +2,8 @@ import axios from "axios";
 
 const generateResponse = async (userInput: string) => {
   try {
-    const kaalaman3_turbo = "/api/kaalaman3-turbo";
-    const kaalaman4_turbo = "/api/kaalaman4-turbo";
     const response = await axios.post(
-      kaalaman4_turbo,
+      "http://localhost:3001/api/kaalaman-turbo",
       { userInput },
       {
         headers: {

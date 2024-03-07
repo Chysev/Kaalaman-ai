@@ -81,11 +81,11 @@ const page = () => {
   const router = useRouter();
 
   return (
-    <Container className="mx-auto p-4 items-center flex flex-col w-full gap-10">
+    <Container className="mx-auto p-4 items-center flex flex-col gap-10 w-full h-screen relative">
       {/* Content Rendering */}
       <Container
         id="responseContainer"
-        className="justify-center max-w-[800px] mt-10 max-h-[800px] max-[768px]:max-h-[700px] overflow-y-auto w-full"
+        className="flex-grow pg-2 justify-center overflow-y-auto pb-[9rem] w-full"
         ref={containerRef}
       >
         {questionsAndResponses.map(({ user, ai }, index) => (
@@ -129,8 +129,8 @@ const page = () => {
       </Container>
 
       {/* User Input Section */}
-      <div className="fixed flex bottom-0 left-0 w-full items-center px-[5px] justify-center pb-3">
-        <div className="flex items-center px-3 py-2 rounded-lg bg-gray-50 dark:bg-slate-800 max-w-[800px] w-full">
+      <div className="fixed bottom-0 left-0 w-full flex justify-center pb-[10px] px-2">
+        <div className="flex-grow flex items-center px-3 py-2 rounded-lg bg-slate-800 max-w-[865px] w-full">
           <button className="text-white" onClick={() => router.push("/")}>
             +
           </button>
