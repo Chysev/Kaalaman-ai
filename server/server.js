@@ -28,11 +28,7 @@ const Models = {
 
 // Model Path and new Model define
 const model = new LlamaModel({
-  modelPath: path.join(
-    process.cwd(),
-    "../../../../GGUFMODELS",
-    Models.llama2_7B_Chat
-  ),
+  modelPath: path.join(process.cwd(), "models", Models.llama2_7B_Chat),
 });
 
 // New Chat Session
