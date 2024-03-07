@@ -35,7 +35,7 @@ const model = new LlamaModel({
 const context = new LlamaContext({ model });
 const session = new LlamaChatSession({
   context,
-  promptWrapper: new LlamaChatPromptWrapper(), // If you are using Llama models change this into LlamaChatPromptWrapper
+  promptWrapper: new LlamaChatPromptWrapper(), // If you are using Llama models change this into LlamaChatPromptWrapper if not use the custom and modify it.
 });
 
 fastify.post("/api/kaalaman-turbo", async function handler(request, reply) {
